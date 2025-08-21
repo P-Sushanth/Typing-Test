@@ -1,7 +1,17 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.jsx';
 import {themes} from './themes.js';
 import './App.css';
 
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/Typing-Test/">
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+);
 // --- WORD LISTS FOR DIFFICULTIES ---
 const easyWords = [
   "react", "javascript", "monkey", "amazing", "pancake", "keyboard", "developer",
